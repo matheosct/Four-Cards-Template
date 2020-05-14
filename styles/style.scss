@@ -1,0 +1,111 @@
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+$dkblue: hsl(234, 12%, 34%);
+$grblue: hsl(229, 6%, 66%);
+$lggray: hsl(0, 0%, 98%);
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $lggray;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text {
+    text-align: center;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 90px;
+
+    h1 { font-weight: 200; }
+    strong {font-weight: 600; }
+    p { margin-top: 35px; }
+}
+
+p { color: $grblue; }
+h1, h3 { color: $dkblue; }
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+}
+
+.card {
+    display: flex;
+    height: 250px;
+    width: 350px;
+    flex-direction: column;
+    padding: 40px 30px 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px $grblue;
+    margin: 30px;
+
+    p {
+        margin-top: 25px;
+        font-size: 12px;
+    }
+
+    img {
+        height: 65px;
+        width: 65px;
+        margin-left: auto;
+        margin-top: auto;
+    }
+}
+
+footer {
+    display: flex;
+    background-color: $dkblue;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    margin-top: 25px;
+    
+    p { font-size: 12px;
+        color: #FFF !important;
+    }
+
+    a { text-decoration: none;
+        color: #63F767;
+        transition: all 0.3s;
+
+        &:hover { color: rgb(17, 170, 22); }
+    }
+}
+
+.cyan { border-top: 5px solid $cyan; }
+.red { border-top: 5px solid $red; }
+.orange { border-top: 5px solid $orange; }
+.blue { border-top: 5px solid $blue; }
+
+@media (max-width: 1024px) {
+    .cards {
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+
+    .red, .blue { margin-top: 0; }
+}
